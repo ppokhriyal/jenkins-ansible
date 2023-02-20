@@ -1,4 +1,2 @@
-[webserver]
-ansible_host=127.0.0.1
-ansible_port=2222
+webserver   ansible_ssh_host=127.0.0.1 ansible_port=2222
 

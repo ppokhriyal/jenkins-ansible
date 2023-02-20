@@ -1,0 +1,18 @@
+---
+- name: Apache WebServer
+  hosts: webserver
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Gather facts available on the target system
+    ansible.builtin.debug:
+        var: ansible_facts
+
+  - name: Install apache server on ubuntu machine only
+    ansible.builtin.apt:
+        name: apache2
+        update_cache: yes
+        state: present
+    when: ansible_facts['os_family'] == "Debian"
+
+

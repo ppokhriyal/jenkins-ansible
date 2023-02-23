@@ -1,0 +1,5 @@
+---
+- name: Start and Enable apache service
+  ansible.builtin.service:
+    name: apache2
+    state: restarted

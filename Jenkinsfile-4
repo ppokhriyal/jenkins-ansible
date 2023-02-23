@@ -2,7 +2,7 @@ pipeline{
     agent any
     environment {
         LANG = "en_US.UTF-8"
-        ANSIBLE_PRIVATE_KEY=credentials('vagrant-private-key')
+        ANSIBLE_PRIVATE_KEY=credentials('vagrant_privatekey')
     }
     stages{
         stage("Check Ansible Version"){

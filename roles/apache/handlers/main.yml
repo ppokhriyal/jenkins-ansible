@@ -2,5 +2,5 @@
 # handlers file for roles/apache
 - name: restart apache
   ansible.builtin.service:
-    name: apache
+    name: apache2
     state: restarted
